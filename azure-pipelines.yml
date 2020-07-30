@@ -22,6 +22,6 @@ steps:
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: 'Cobertura'
-    summaryFileLocation: 
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/KM-88.demo-sample/test/coverage'
     pathToSources: '$(System.DefaultWorkingDirectory)/KM-88.demo-sample/src/test/java/'
     goals: 'package'
