@@ -19,4 +19,9 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'Cobertura'
+    summaryFileLocation: 
+    pathToSources: '$(System.DefaultWorkingDirectory)/KM-88.demo-sample/src/test/java/'
     goals: 'package'
